@@ -13,4 +13,4 @@ sleep 1
 echo 1 > /dev/ttyS1
 sx -X /tmp/firmware.gbl </dev/ttyS1 >/dev/ttyS1
 rm -f /tmp/firmware.gbl
-echo 'The firmware is complete, now reboot the gateway. You can also optionally add the "post_init.sh" script'
+echo 'Firmware flashing is complete, now reboot the gateway. You can also optionally add the "post_init.sh" script'
