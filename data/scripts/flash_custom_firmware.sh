@@ -14,7 +14,7 @@ while true; do
         break;;
       2)
         firmware_url=$(curl --insecure --silent https://api.github.com/repos/darkxst/silabs-firmware-builder/releases/latest | grep browser_download_url | grep 'lumi-gateway-mgl001_zigbee_ncp' | cut -d '"' -f 4)
-        [ $(echo $firmware_url | grep -o https | wc -l) -gt 1 ] && { echo "Can't get the firmware download link. Use the tested version from this repository or create an isssue."; exit 1; }
+        [ $(echo $firmware_url | grep -o https | wc -l) -ne 1 ] && { echo "Can't get the firmware download link. Use the tested version from this repository or create an isssue."; exit 1; }
         echo "Founded firmware: ${firmware_url##*/}"
         echo "Type yes, if you want to use it."
         read choice
