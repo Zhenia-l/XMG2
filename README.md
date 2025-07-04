@@ -6,11 +6,11 @@ gateway with ncp 8.0.2 firmware tested and stable in zigbee2mqtt with ember driv
 
 ### Prepare gateway:
 1. install and configure AlexxIT gateway3 integration
-2. copy content of the data folder of this repository to the data folder on the gateway (post_init.sh is optional)
+2. copy content of the data folder of this repository to the /data folder on the gateway (post_init.sh is optional). The easiest way is to open ftp via AlexxIT gateway3 integration
 3. chmod +x /data/bin/* /data/scripts/*
 
 Now you can use /data/scripts/flash_{stock/custom}_firmware.sh scripts. Follow the instructions in the output of the corresponding script.
-By default, custom zigbee firmware is downloaded from the latest release of [darkxst/silabs-firmware-builder](https://github.com/darkxst/silabs-firmware-builder) repository.
+During flashing you can choose between a long-tested firmware from this repository and the latest firmware from the [darkxst/silabs-firmware-builder](https://github.com/darkxst/silabs-firmware-builder) repository.
 
 z2m adapter settings:
 - port: tcp://gateway_ip:8888
