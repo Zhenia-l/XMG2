@@ -12,6 +12,8 @@ gateway with ncp 8.0.2 firmware tested and stable in zigbee2mqtt with ember driv
 Now you can use /data/scripts/flash_{stock/custom}_firmware.sh scripts. Follow the instructions in the output of the corresponding script.
 During flashing you can choose between a long-tested firmware from this repository and the latest firmware from the [darkxst/silabs-firmware-builder](https://github.com/darkxst/silabs-firmware-builder) repository.
 
+Before updating the hub via Mi Home, you need to install the standard Zigbee firmware and delete/rename the post_init.sh. After update you can flash custom zigbee firmware again. 
+
 z2m adapter settings:
 - port: tcp://gateway_ip:8888
 - adapter: ember
